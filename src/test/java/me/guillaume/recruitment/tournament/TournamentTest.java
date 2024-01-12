@@ -1,7 +1,11 @@
 package me.guillaume.recruitment.tournament;
 
 
+import me.guillaume.recruitment.tournament.fighters.Swordsman;
+import me.guillaume.recruitment.tournament.fighters.Viking;
 import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 
 /**
@@ -37,11 +41,9 @@ public class TournamentTest {
     @Test
     public void SwordsmanWithBucklerVsVikingWithBuckler() {
 
-        Swordsman swordsman = new Swordsman()
-                .equip("buckler");
+        Swordsman swordsman = new Swordsman().equip("buckler");
 
-        Viking viking = new Viking()
-                .equip("buckler");
+        Viking viking = new Viking().equip("buckler");
 
         swordsman.engage(viking);
 
