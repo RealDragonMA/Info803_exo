@@ -1,5 +1,6 @@
 package me.guillaume.recruitment.tournament.fighters;
 
+import me.guillaume.recruitment.tournament.equipments.Buckler;
 import me.guillaume.recruitment.tournament.weapons.Sword;
 
 public class Swordsman extends Fighter {
@@ -9,6 +10,7 @@ public class Swordsman extends Fighter {
     }
 
     public Swordsman equip(String equipment){
+        if (equipment.equals("buckler")) addEquipment(new Buckler());
         return this;
     }
 

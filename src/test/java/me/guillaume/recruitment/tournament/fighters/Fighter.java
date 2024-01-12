@@ -26,8 +26,8 @@ public abstract class Fighter {
 
     private void playTurn(Fighter opponent) {
         int damage = getWeapon().getDamage();
-        for (Equipment equipment : equipments) {
-            damage += equipment.run(this, opponent);
+        for (Equipment equipment : opponent.getEquipments()) {
+            damage = equipment.run(opponent, this, damage);
         }
         opponent.hit(damage);
     }

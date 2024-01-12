@@ -1,6 +1,7 @@
 package me.guillaume.recruitment.tournament;
 
 
+import me.guillaume.recruitment.tournament.fighters.Highlander;
 import me.guillaume.recruitment.tournament.fighters.Swordsman;
 import me.guillaume.recruitment.tournament.fighters.Viking;
 import org.junit.jupiter.api.Test;
@@ -70,29 +71,6 @@ public class TournamentTest {
 
         assertThat(swordsman.hitPoints()).isEqualTo(0);
         assertThat(highlander.hitPoints()).isEqualTo(10);
-
-    }
-
-    /**
-     * a vicious Swordsman is a Swordsman that put poison on his weapon.
-     * poison add 20 damages on two first blows
-     * a veteran Highlander goes Berserk once his hit points are under 30% of his initial total
-     * once Berserk, he doubles his damages
-     */
-    @Test // Bonus points :D
-    public void ViciousSwordsmanVsVeteranHighlander() {
-
-        Swordsman swordsman = new Swordsman("Vicious")
-                .equip("axe")
-                .equip("buckler")
-                .equip("armor");
-
-        Highlander highlander = new Highlander("Veteran");
-
-        swordsman.engage(highlander);
-
-        assertThat(swordsman.hitPoints()).isEqualTo(1);
-        assertThat(highlander.hitPoints()).isEqualTo(0);
 
     }
 

@@ -14,6 +14,8 @@ public abstract class Weapon {
         this(damage, 1);
     }
 
+    public abstract int getDamageModifier();
+
     public int getDamage() {
         return damage;
     }
